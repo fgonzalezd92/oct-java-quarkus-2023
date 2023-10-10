@@ -23,8 +23,9 @@ public class Lab01 {
                 message = AIM_HIGHER;
             } else {
                 //message = "You've got it in " + attempts + " attempts";
-                message = "You've got it in %s attempts".formatted(attempts);
+                //message = "You've got it in %s attempts".formatted(attempts);
                 gameOver = true;
+                message = "You've got it in %s attempts. Game over: %s".formatted(attempts, true);
             }
             System.out.println(message);
         }
