@@ -5,10 +5,23 @@ public class Book {
     private double price;
     private Publisher publisher;
 
+    public Book(String title) {
+        this.title = title;
+    }
+
     public Book(String title, double price) {
         this.title = title;
         this.price = price;
     }
+
+    public void buy(String store) {
+        System.out.println("Buying %s from %s".formatted(this.title, store));
+    }
+
+    public void buy(String store, int quantity) {
+        System.out.println("Buying %s quantities of %s from %s".formatted(quantity, this.title, store));
+    }
+
 
     public Publisher getPublisher() {
         return publisher;
