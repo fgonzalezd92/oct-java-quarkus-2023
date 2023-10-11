@@ -12,3 +12,16 @@
 * https://www.oracle.com/in/java/technologies/downloads/
 * **java -version**
 * Before version 8 (0r 1.8) and after 8(Or 1.8)
+
+## Day 01
+
+* Data types; Primitive and Reference types
+* Primitive types are stored in the stack; Reference types are stored on the heap
+* Wrapper classes used to box primitive types; Integer, Double, Byte, Long, Boolean
+* Strings; Immutable; Stored in the string pool; There is an implicit object created to refer to the literal in the pool
+* Everytime you change the value, a new literal thereby a new object is created
+* If you want to manipulate strings, use StringBuilder 
+* Two ways of creating strings; with/without using new keyword;
+* Use **.equals** to compare the values of the string
+* foreach, for, while, do-while
+* if-else, ?:, switch-case
