@@ -5,6 +5,9 @@
       <module name="day02-oo-concepts" target="17" />
       <module name="day02-oo-concepts.main" target="17" />
       <module name="day02-oo-concepts.test" target="17" />
+      <module name="day03-oo-concepts" target="17" />
+      <module name="day03-oo-concepts.main" target="17" />
+      <module name="day03-oo-concepts.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

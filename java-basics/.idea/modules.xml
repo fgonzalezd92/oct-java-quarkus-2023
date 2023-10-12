@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/day02-oo-concepts.iml" filepath="$PROJECT_DIR$/day02-oo-concepts.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day02-oo-concepts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day02-oo-concepts.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day02-oo-concepts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day02-oo-concepts.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03-oo-concepts.iml" filepath="$PROJECT_DIR$/day03-oo-concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day03-oo-concepts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day03-oo-concepts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day03-oo-concepts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day03-oo-concepts.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-basics.iml" filepath="$PROJECT_DIR$/java-basics.iml" />
     </modules>
   </component>

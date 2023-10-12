@@ -25,3 +25,19 @@
 * Use **.equals** to compare the values of the string
 * foreach, for, while, do-while
 * if-else, ?:, switch-case
+
+## Day 02
+
+* OO concepts; 
+* Java beans; POJO with no-arg constructor, private variables; public getter/setter methods
+* extends, super, for inheritance;
+* redefine the base class method with the same signature in the derived class is considered **overriding**
+* private, static, final(sealed) methods; final(sealed) classes cannot be extended
+* abstract;
+* Inner classes; can access private members of outer class; you can create an instance of inner class only using outer class object;
+* Compiler generates Outer$Inner.class files
+
+
+
+
+ 
