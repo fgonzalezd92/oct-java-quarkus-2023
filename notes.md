@@ -37,6 +37,20 @@
 * Inner classes; can access private members of outer class; you can create an instance of inner class only using outer class object;
 * Compiler generates Outer$Inner.class files
 
+## Day 03
+
+* interfaces; **implements** keyword to inherit interfaces
+* can have constants; abstract methods; default methods and also static methods
+* record, enum;
+* packages: physical grouping of folders and files
+* by default the access specifier for an entity is package-friendly;
+* java.util: List, Set, Map; java.io, java.nio,java.net, java.sql
+
+
+
+
+
+
 
 
 

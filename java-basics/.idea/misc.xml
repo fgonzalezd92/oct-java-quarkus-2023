@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/day02-oo-concepts" />
     <file type="web" url="file://$PROJECT_DIR$/day03-oo-concepts" />
+    <file type="web" url="file://$PROJECT_DIR$/day04-lambdas" />
   </component>
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
