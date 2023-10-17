@@ -7,9 +7,9 @@ import java.util.function.Supplier;
 
 public class BuiltInFunctionalInterfaces {
     public static void main(String[] args) {
-        Predicate predicate;
-        Function function;
+        Predicate predicate; //filter
+        Function function; //map, reduce, collect
         Supplier supplier;
-        Consumer consumer;
+        Consumer consumer;//forEach
     }
 }
