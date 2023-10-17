@@ -46,7 +46,25 @@
 * by default the access specifier for an entity is package-friendly;
 * java.util: List, Set, Map; java.io, java.nio,java.net, java.sql
 
+## Day 04
 
+* interfaces with just one abstract method are Functional interfaces
+* You can syntactically mark them as **@FunctionalInterface**
+* Lambda expression is an implementation of functional interface
+* You use the lambda (->) operator and specify single line or multi-line implementations of interface
+* During runtime, lambda expression is converted to a new (anonymous inner) class 
+* Lambda expressions can be passed as arguments to other functions
+* Conceptually lambda expression paves way for storing block of code as values to variables
+
+``` java
+@FunctionalInterface
+interface Greetings {
+	void hello(String name);
+}
+
+Greetings greetings = name -> System.out.println("Hi " + name);
+greetings.hello("Sam");
+```
 
 
 

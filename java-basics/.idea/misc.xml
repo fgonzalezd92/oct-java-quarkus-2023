@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/day02-oo-concepts" />
     <file type="web" url="file://$PROJECT_DIR$/day03-oo-concepts" />
     <file type="web" url="file://$PROJECT_DIR$/day04-lambdas" />
+    <file type="web" url="file://$PROJECT_DIR$/day05-functional-interfaces" />
   </component>
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />

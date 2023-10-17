@@ -11,6 +11,9 @@
       <module name="day04-lambdas" target="17" />
       <module name="day04-lambdas.main" target="17" />
       <module name="day04-lambdas.test" target="17" />
+      <module name="day05-functional-interfaces" target="17" />
+      <module name="day05-functional-interfaces.main" target="17" />
+      <module name="day05-functional-interfaces.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
