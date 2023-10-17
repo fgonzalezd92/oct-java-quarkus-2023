@@ -31,6 +31,9 @@ public class MethodReferenceExample {
         //cities.forEach(city -> System.out.println(city));
         cities.forEach(System.out::println);
 
+        //String::new; //Supplier
+
+
         Function<String, Integer> length = value -> value.length();
         Function<String, Integer> lengthFunction = String::length;
         Function<String, String> toCaps = String::toUpperCase;
