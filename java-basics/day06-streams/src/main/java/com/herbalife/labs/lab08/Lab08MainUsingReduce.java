@@ -2,6 +2,7 @@ package com.herbalife.labs.lab08;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Lab08MainUsingReduce {
@@ -15,11 +16,14 @@ public class Lab08MainUsingReduce {
                 new Item("Fila", 15.15));
 
         //Print the name and price of the costliest shoe
-        Item costliestItem = items
+        Optional<Item> costliestItem = items
                 .stream()
-                .reduce((currentItem, nextItem) -> currentItem.getPrice() >= nextItem.getPrice() ? currentItem : nextItem)
-                .get();
-        System.out.println(costliestItem);
+                .reduce((currentItem, nextItem) -> currentItem.getPrice() >= nextItem.getPrice() ? currentItem : nextItem);
+//                .get();
+        if (costliestItem.isPresent()) {
+            System.out.println(costliestItem.get());
+        }
+
 
         //Print the name and price of the costliest shoe
         Item cheapestItem = items
