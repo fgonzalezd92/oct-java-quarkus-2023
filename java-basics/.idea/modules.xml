@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/day05-functional-interfaces.iml" filepath="$PROJECT_DIR$/day05-functional-interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day05-functional-interfaces.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day05-functional-interfaces.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day05-functional-interfaces.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day05-functional-interfaces.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06-streams.iml" filepath="$PROJECT_DIR$/day06-streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day06-streams.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day06-streams.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day06-streams.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day06-streams.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-basics.iml" filepath="$PROJECT_DIR$/java-basics.iml" />
     </modules>
   </component>

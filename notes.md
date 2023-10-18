@@ -66,6 +66,15 @@ Greetings greetings = name -> System.out.println("Hi " + name);
 greetings.hello("Sam");
 ```
 
+## Day 05
+
+* java.util.function.*
+* Functional interfaces; Predicate, Function, Supplier, Consumer
+* Method Reference operator **::** 
+* Shortcut for lambda expressions
+* System.out::println, String::toUpperCase (str -> str.toUpperCase())
+
+
 
 
 
