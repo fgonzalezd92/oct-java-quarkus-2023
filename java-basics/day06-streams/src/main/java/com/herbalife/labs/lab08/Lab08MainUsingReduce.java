@@ -4,9 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Lab08Main {
+public class Lab08MainUsingReduce {
     public static void main(String[] args) {
-        List<Item> items = Arrays.asList(new Item("Nike", 20.45),
+        List<Item> items = Arrays.asList(
+                new Item("Nike", 20.45),
                 new Item("Power", 31.45),
                 new Item("Adidas", 31.45),
                 new Item("Reebok", 29.25),
@@ -16,14 +17,14 @@ public class Lab08Main {
         //Print the name and price of the costliest shoe
         Item costliestItem = items
                 .stream()
-                .max((item1, item2) -> Double.compare(item1.getPrice(), item2.getPrice()))
+                .reduce((currentItem, nextItem) -> currentItem.getPrice() >= nextItem.getPrice() ? currentItem : nextItem)
                 .get();
         System.out.println(costliestItem);
 
         //Print the name and price of the costliest shoe
         Item cheapestItem = items
                 .stream()
-                .min((item1, item2) -> Double.compare(item1.getPrice(), item2.getPrice()))
+                .reduce((currentItem, nextItem) -> currentItem.getPrice() < nextItem.getPrice() ? currentItem : nextItem)
                 .get();
         System.out.println(cheapestItem);
 
