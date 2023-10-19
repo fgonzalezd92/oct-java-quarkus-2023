@@ -17,6 +17,9 @@
       <module name="day06-streams" target="17" />
       <module name="day06-streams.main" target="17" />
       <module name="day06-streams.test" target="17" />
+      <module name="day09-misc" target="17" />
+      <module name="day09-misc.main" target="17" />
+      <module name="day09-misc.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

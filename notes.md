@@ -75,6 +75,36 @@ greetings.hello("Sam");
 * System.out::println, String::toUpperCase (str -> str.toUpperCase())
 
 
+## Day 06
+
+* Stream API
+* Stream is an abstraction/snapshot of a collection
+* Create a stream on a collection by using .stream() method
+* Streams are used for read-only operations on collections
+* Stream cannot be reused once it's acted upon
+* Streams are lazily evaluated till the terminal operation like get, collect, forEach is called.
+* filter, map, reduce, max, min, collect
+* Optional type; Optional type is a like a box that holds data; You need to check if it contains the data and **get()** the value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
