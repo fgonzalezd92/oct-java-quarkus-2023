@@ -18,13 +18,15 @@ public class WorkingWithJson {
                 .skip(1)
                 .map(line -> new City(line.split(",")[0], line.split(",")[1], Long.parseLong(line.split(",")[2])))
                 .collect(Collectors.toList());
-        cityList.forEach(System.out::println);
+        //cityList.forEach(System.out::println);
 
         //convert cityList to Json
         //you need to use a particular library;
         //where do you look for the library. From a central repository called Maven repository
         ObjectMapper objectMapper = new ObjectMapper();
-        
+        String json = objectMapper.writeValueAsString(cityList);
+        System.out.println(json);
+
 
     }
 }

@@ -1,9 +1,15 @@
 package com.herbalife.examples;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class City {
+    @JsonProperty("city")
     private String name;
     private String country;
     private long population;
+    @JsonIgnore
+    private boolean highlyPopulated;
 
     public City() {
     }
@@ -12,6 +18,14 @@ public class City {
         this.name = name;
         this.country = country;
         this.population = population;
+    }
+
+    public boolean isHighlyPopulated() {
+        return highlyPopulated;
+    }
+
+    public void setHighlyPopulated(boolean highlyPopulated) {
+        this.highlyPopulated = highlyPopulated;
     }
 
     public String getName() {
