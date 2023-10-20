@@ -17,6 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/day06-streams.iml" filepath="$PROJECT_DIR$/day06-streams.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day06-streams.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day06-streams.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day06-streams.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day06-streams.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day08_jdbc.iml" filepath="$PROJECT_DIR$/day08_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day08_jdbc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day08_jdbc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day08_jdbc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day08_jdbc.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/day09-misc.iml" filepath="$PROJECT_DIR$/day09-misc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day09-misc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day09-misc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day09-misc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day09-misc.test.iml" />

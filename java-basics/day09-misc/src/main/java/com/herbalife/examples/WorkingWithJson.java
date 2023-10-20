@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class WorkingWithJson {
     private static List<String> lines = null;
     public static void main(String[] args) throws IOException {
+
         String filePath = "cities.csv";
         lines = Files.readAllLines(Paths.get(filePath));
         List<City> cityList = lines

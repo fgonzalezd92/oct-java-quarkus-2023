@@ -6,7 +6,10 @@ group = 'org.example'
 version = '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
+    mavenCentral() //NOT RECOMMENDED FOR LARGER ORGANIZATIONS
+//    maven {
+//        url "https://herbalife.repository"
+//    }
 }
 
 dependencies {
