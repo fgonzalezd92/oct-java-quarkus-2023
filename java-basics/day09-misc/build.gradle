@@ -19,7 +19,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: '2.13.4'
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
-
+    runtimeOnly 'mysql:mysql-connector-java:8.0.33'
     //jar file which is a collection of .class files; it's like a zip file
 
 }
