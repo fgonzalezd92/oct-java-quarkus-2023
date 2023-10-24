@@ -15,7 +15,8 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Lab10Main {
-    static ObjectMapper objectMapper = new ObjectMapper();
+    public static final String OMDB_API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=52d1c7f&t=";
+    public static ObjectMapper objectMapper = new ObjectMapper();
 
     public static void main(String[] args) throws IOException, InterruptedException, SQLException {
         System.out.println("Enter a movie name");
@@ -58,7 +59,7 @@ public class Lab10Main {
     }
 
     private static String getMovieDetailsFromOmdb(String movie) throws IOException, InterruptedException {
-        String url = "http://www.omdbapi.com/?i=tt3896198&apikey=52d1c7f&t=" + URLEncoder.encode(movie, "UTF-8");
+        String url = OMDB_API_URL + URLEncoder.encode(movie, "UTF-8");
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest
                 .newBuilder()
