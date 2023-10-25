@@ -30,7 +30,8 @@ public class CompletableFutureExample {
         CompletableFuture
                 .supplyAsync(task, executorService) //Non-blocking call
                 .thenAccept(value -> System.out.println("Random number is " + value))
-                .thenAccept(value -> System.out.println("End of completable future"));
+                .thenAccept(value -> System.out.println("End of completable future"))
+                .join(); //Blocking call, waits for the task to complete; Similar to using Future.get()
 
         System.out.println("******End of main method");
 
