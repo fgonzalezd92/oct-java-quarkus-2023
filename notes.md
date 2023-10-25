@@ -86,6 +86,14 @@ greetings.hello("Sam");
 * filter, map, reduce, max, min, collect
 * Optional type; Optional type is a like a box that holds data; You need to check if it contains the data and **get()** the value
 
+## Day 09
+
+* **java.util.concurrent** is the package that contains classes dealing with concurrency
+* Thread class and pass implementation of Runnable interface
+* **ExecutorService** to create thread pools. Submit your task to the thread pool.
+* Number of threads = number of cores/(1 - BlockingFactor)
+* Blocking factor is between 0 to 1 depending on whether the task is CPU intensive or IO intensive
+* Fixed thread pool, Cached thread pool, ForkJoinPool
 
 
 

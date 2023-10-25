@@ -73,6 +73,16 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/day10-more-concurrency" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.2.1/libexec" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/day10-more-concurrency" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

@@ -23,6 +23,9 @@
       <module fileurl="file://$PROJECT_DIR$/day09-misc.iml" filepath="$PROJECT_DIR$/day09-misc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day09-misc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day09-misc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day09-misc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day09-misc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day10-more-concurrency.iml" filepath="$PROJECT_DIR$/day10-more-concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day10-more-concurrency.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day10-more-concurrency.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day10-more-concurrency.test.iml" filepath="$PROJECT_DIR$/.idea/modules/day10-more-concurrency.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-basics.iml" filepath="$PROJECT_DIR$/java-basics.iml" />
     </modules>
   </component>
