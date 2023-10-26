@@ -96,9 +96,30 @@ greetings.hello("Sam");
 * Fixed thread pool, Cached thread pool, ForkJoinPool
 
 
+### Quarkus
 
+* Install JDK ( Java Standard Edition, Java SE)
+* Core VM (Hotspot JVM), Coretto JVM, Eclipse Temurin, Graal VM 
+* **Enterprise applications**; REST API, Web application, Messaging, Security, Scheduling, ORM
+* Install JEE SDK (Java Enterprise Edition, JEE)
+* Core JEE SDK is just one of the implementations out there; Not widely used
+* Rest API -> Spring Boot, Struts, Jersey, Quarkus, RestEasy
+* ORM(JPA) -> Hibernate, TopLink, Mybatis, Core JPA
+* Messaging -> spring boot, spring cloud streams, quarkus
+* All in one -> Framework
+* **Spring boot; Quarkus; Micronaut**; -> Frameworks that contains all the libraries/tools to build enterprise applications in Java. They are the implementations of JEE spec
 
+* Became popular when Microservices started getting more adopted
+* Microservices unlike SOA is not a standard
+* Microprofile (https://microprofile.io/) is an effort to standardize microservices architectures
+* **Quarkus** is a framework that conforms to the Microprofile standard of building microservices
+* Quarkus is k8s native(*marketing gimmick in my opinion*)
+* Quarkus performs faster than its competitors like spring boot, because it can generate native executables: - **More about this later*
+*
+### Dependency Injection
 
+* DI: Fundamental principle on which frameworks like Quarkus and Spring boot are designed upon
+* DI is a mechanism by which you avoid writing unneccesary creation and lookup code
 
 
 
