@@ -4,7 +4,7 @@ import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
 import jakarta.inject.Inject;
 
-@QuarkusMain // This annotation tells Quarkus that this is the main class
+//@QuarkusMain // This annotation tells Quarkus that this is the main class
 public class HelloWorld implements QuarkusApplication {
 
 

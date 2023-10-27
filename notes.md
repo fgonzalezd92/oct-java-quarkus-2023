@@ -121,6 +121,16 @@ greetings.hello("Sam");
 * DI: Fundamental principle on which frameworks like Quarkus and Spring boot are designed upon
 * DI is a mechanism by which you avoid writing unneccesary creation and lookup code
 
+#### Quarkus Day 11
+
+* https://code.quarkus.io 
+* Select the version, build tool, extensions(or dependencies)
+* quarkus-arc is the main dependency for DI
+* **@QuarkusMain** : Commandline application
+* Mark the bean in a scope: @Singleton or @ApplicationScoped
+* @Inject the beans wherever you need
+* @ConfigProperty or @ConfigMapping(prefix = "")
+* @Named, @Default or @Alternative
 
 
 
