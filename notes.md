@@ -133,6 +133,29 @@ greetings.hello("Sam");
 * @Named, @Default or @Alternative
 
 
+#### Quarkus Day 12
+
+* REST API
+* Add the extension *Resteasy-Reactive-Jackson*
+* By default it uses an embedded Netty server
+* Create Resources using **@Path** annotation 
+* Methods are annotated using **@GET**, **@POST**, **@PUT** ... etc
+* **@PathParam, @QueryParam, @HeaderParam, @FormParam**
+* package the application as a jar file; fat(uber), fast jar, or native image
+* Run your application as a jar file 
+
+```
+java -jar <jarFile>
+```
+
+```
+java -Dquarkus.http.port=9090 -jar <jarFile>
+```
+
+
+
+
+
 
 
 

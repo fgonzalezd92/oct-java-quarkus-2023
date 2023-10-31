@@ -46,10 +46,40 @@ docker run -p 3306:3306  -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 docker exec --it dcd4ecfbdb80c745f21094db311a4dae61c4a42b941b6861067e650733faa423 /bin/sh
 ```
 
+#### Containerizing quarkus
 
+* Create a dockerfile
 
+```
+# Install JDK 17
+FROM openjdk:17-alpine
+# Copy the jar file
+COPY build/day13-container-db-1.0.0-runner.jar app.jar
+# Run the jar file
+ENTRYPOINT ["java", "-jar", "/app.jar"]
 
+```
 
+* Build an image
+* If the name of the docker file is **Dockerfile**
+
+```
+docker build -t <imageName>:<version> .
+```
+
+* If you have a different name for the dockerfile
+
+```
+docker build -t <imageName>:<version> -f <dockerfileName>
+```
+
+* Run the image
+
+```
+docker run --name <nameOfTheContainer> --rm -p 8080:8080 -d <imageName>:<version>
+```
+
+* --rm removes the container when you stop it
 
 
 
