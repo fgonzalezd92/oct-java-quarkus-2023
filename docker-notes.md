@@ -50,7 +50,7 @@ docker exec --it dcd4ecfbdb80c745f21094db311a4dae61c4a42b941b6861067e650733faa42
 
 * Create a dockerfile
 
-```
+``` Dockerfile
 # Install JDK 17
 FROM openjdk:17-alpine
 # Copy the jar file
@@ -83,7 +83,7 @@ docker run --name <nameOfTheContainer> --rm -p 8080:8080 -d <imageName>:<version
 
 * If you have environment variables defined like this
 
-```
+``` Dockerfile
 # Install JDK 17
 FROM openjdk:17-alpine
 # Copy the jar file
