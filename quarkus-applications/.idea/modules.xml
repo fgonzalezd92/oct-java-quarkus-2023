@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day14-rest-jdbc-jpa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day14-rest-jdbc-jpa.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/quarkus-applications.iml" filepath="$PROJECT_DIR$/quarkus-applications.iml" />
     </modules>
   </component>

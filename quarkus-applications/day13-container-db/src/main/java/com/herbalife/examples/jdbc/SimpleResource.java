@@ -1,4 +1,4 @@
-package com.herbalife.examples;
+package com.herbalife.examples.jdbc;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
