@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/day12-rest-api" />
     <file type="web" url="file://$PROJECT_DIR$/day13-container-db" />
     <file type="web" url="file://$PROJECT_DIR$/day14-rest-jdbc-jpa" />
+    <file type="web" url="file://$PROJECT_DIR$/quarkus-lab04-orm" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="graalvm-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

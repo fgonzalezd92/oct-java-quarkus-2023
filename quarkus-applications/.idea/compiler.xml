@@ -48,8 +48,12 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-classloader/2.2.0/40f95284ba794d9a88b5aa78e8961e83a1829061/smallrye-common-classloader-2.2.0.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.5/dc6ea1875f4d64fbc85e1691c95b96a3d8569c90/asm-9.5.jar" />
         </processorPath>
-        <module name="day14-rest-jdbc-jpa.main" />
+        <module name="quarkus-lab04-orm.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="quarkus-lab04-orm.native-test" target="17" />
+      <module name="quarkus-lab04-orm.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
