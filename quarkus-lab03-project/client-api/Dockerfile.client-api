@@ -1,0 +1,6 @@
+FROM openjdk:17-alpine
+COPY build/client-api-1.0-SNAPSHOT-runner.jar /client-api.jar
+EXPOSE 8081
+ENV PALINDROME_API_HOST=host.docker.internal
+ENV PALINDROME_API_PORT=8082
+ENTRYPOINT ["java", "-jar", "/client-api.jar"]

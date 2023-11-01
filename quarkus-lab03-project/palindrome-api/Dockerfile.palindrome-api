@@ -1,0 +1,4 @@
+FROM openjdk:17-alpine
+COPY build/palindrome-api-1.0-SNAPSHOT-runner.jar /palindrome-api.jar
+EXPOSE 8082
+ENTRYPOINT ["java", "-jar", "/palindrome-api.jar"]

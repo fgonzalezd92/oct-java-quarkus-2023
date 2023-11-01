@@ -21,5 +21,6 @@ public class SimpleResource {
     @Path("/goodbye")
     public String goodbye() {
         return goodbye;
+
     }
 }
