@@ -59,4 +59,10 @@ public class PersonRepository implements PanacheRepositoryBase<Person, Integer> 
         List<Person> persons = find(query).list();
         return persons;
     }
+
+    public List<Person> getPersonsWithAtleastDogs(int count) {
+        String query = "from Person p where size(p.dogs) >= :countParam";
+        Map<String, Object> params = Map.of("countParam", count);
+        return find(query, params).list();
+    }
 }

@@ -2,10 +2,12 @@ package com.herbalife.examples;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
 @Table(name = "cars")
+@ToString(exclude = "owner")
 public class Car {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
@@ -14,9 +16,10 @@ public class Car {
     @Column
     private String model;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "person_id")
     private Person owner;
+
 
     //WRONG
 //    @Column(name = "person_id")
