@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day14-rest-jdbc-jpa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/day14-rest-jdbc-jpa.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/quarkus-applications.iml" filepath="$PROJECT_DIR$/quarkus-applications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/quarkus-lab04-orm.main.iml" filepath="$PROJECT_DIR$/.idea/modules/quarkus-lab04-orm.main.iml" />
     </modules>
   </component>
 </project>
