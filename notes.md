@@ -152,6 +152,19 @@ java -jar <jarFile>
 java -Dquarkus.http.port=9090 -jar <jarFile>
 ```
 
+### Day 15 
+
+* Jdbc with Quarkus
+* Add the driver and agroal extensions
+* Configure the datasource related info in properties file
+* Inject a **DataSource** into your classes
+* **getConnection()** from the DataSource to work with DB
+* JPA -> Jakarta/Java Persistence API
+* Uniform API to use any ORM frameworks
+* You create an Entity class; Map the class with the table; variables with the columns
+* Define a **Repository** class by specifying the entity class and the primary key type
+* Inject the Repository and use the methods to perform CRUD operations
+* Mark the method as **@Transactional** if you have CUD operations
 
 
 
