@@ -11,8 +11,8 @@ balance int
 * insert two accounts directly into the database
 
 ```
-INSERT INTO accountsdb.accounts VALUES('acc101', 'John', 20000);
-INSERT INTO accountsdb.accounts VALUES('acc102', 'Ram', 10000);
+INSERT INTO training.accounts VALUES('acc101', 'John', 20000);
+INSERT INTO training.accounts VALUES('acc102', 'Ram', 10000);
 ```
 
 * Create a table __account-transactions__ with 4 columns
