@@ -8,6 +8,7 @@
     <file type="web" url="file://$PROJECT_DIR$/day15-more-on-orm" />
     <file type="web" url="file://$PROJECT_DIR$/day16-more-on-rest-di" />
     <file type="web" url="file://$PROJECT_DIR$/quarkus-lab04-orm" />
+    <file type="web" url="file://$PROJECT_DIR$/quarkus-lab05" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="graalvm-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
