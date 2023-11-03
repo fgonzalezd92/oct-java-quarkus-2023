@@ -152,7 +152,7 @@ java -jar <jarFile>
 java -Dquarkus.http.port=9090 -jar <jarFile>
 ```
 
-### Day 15 
+### Day 14 
 
 * Jdbc with Quarkus
 * Add the driver and agroal extensions
@@ -165,6 +165,16 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * Define a **Repository** class by specifying the entity class and the primary key type
 * Inject the Repository and use the methods to perform CRUD operations
 * Mark the method as **@Transactional** if you have CUD operations
+
+
+### Day 15
+
+* JPA (Hibernate implementation of JPA, Hibernate Panache)
+* JPQL (or HQL) query the classes and properties
+* Inject EntityManager and use the methods to execute native SQL
+* @OneToMany, @ManyToOne, @ManyToMany
+* Lazy loading, cascade options while Insert/Delete
+* **Do not create a variable that maps to the foreign key column**
 
 
 
