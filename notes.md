@@ -176,7 +176,27 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * Lazy loading, cascade options while Insert/Delete
 * **Do not create a variable that maps to the foreign key column**
 
+### Day 16
 
+* Active Record pattern; Entity class itself has the behavior to perform CRUD operations
+* Exception handling. **@Provider** and **ExceptionMapper** are used
+
+### Kafka
+
+* Streaming millions of messages at a rapid pace
+* Broadcast or pub/sub model
+* Kafka is an open source MoM created by LinkedIn and now open sourced and maintained by Apache
+* Apache Kafka (https://kafka.apache.org/)
+* You can set it up on your own and use it or use a cloud solution
+* Popular Kafka cloud provider is Confluent Kafka
+* Equivalent in Azure is **Event Hub**; AWS is **Amazon Kinesis**; 
+
+#### What is involved in working with Kafka?
+
+* Set up a Kafka Cluster -> Several Kafka brokers interconnected; For dev we'll set up a single node kafka cluster
+* Create **Topics** (mailboxes)
+* Create applications to publish messages to Topics
+* Create applications to consume messages from Topics
 
 
 

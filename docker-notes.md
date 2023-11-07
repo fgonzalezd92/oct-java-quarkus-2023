@@ -103,4 +103,15 @@ docker run --name my-api-2 --rm -d  -p 8081:8080 -e GREETINGS="Ola" -e GOODBYE="
 
 ```
 
+### Running docker compose file
+
+```
+docker compose -p my-kafka -d -f docker-compose-kafka.yml up 
+```
+
+
+
+
+
+
 
