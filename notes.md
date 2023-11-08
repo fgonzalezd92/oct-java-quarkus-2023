@@ -198,7 +198,15 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * Create applications to publish messages to Topics
 * Create applications to consume messages from Topics
 
+## Day 17
 
+* Publisher/Consumer applications that publish to topics in Kafka and receive messages from Kafka
+* **smallrye-connector-kafka** library in Quarkus
+* Configure the channels in configuration file; 
+* Channel can be an outgoing or incoming 
+* You can give any name for your channel and specify the topic that it's listening to
+* **@Inject** the **@Channel** to **Emitter**
+* **@Incoming("channel-name")** to consume messages from the topic
 
 
 
