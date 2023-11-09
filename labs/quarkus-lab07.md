@@ -12,10 +12,10 @@ quarkus.application.name=lab07-consumer
 quarkus.package.type=uber-jar
 kafka.bootstrap.servers=localhost:9092
 
-mp.messaging.incoming.lab06-in.connector=smallrye-kafka
-mp.messaging.incoming.lab06-in.topic=lab07-topic
-mp.messaging.incoming.lab06-in.group.id=lab07-group-dev-1
-mp.messaging.incoming.lab06-in.auto.offset.reset=earliest
+mp.messaging.incoming.lab07-in.connector=smallrye-kafka
+mp.messaging.incoming.lab07-in.topic=lab07-topic
+mp.messaging.incoming.lab07-in.group.id=lab07-group-dev-1
+mp.messaging.incoming.lab07-in.auto.offset.reset=earliest
 ```
 
 * Have the following class in your project
