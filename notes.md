@@ -208,7 +208,15 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * **@Inject** the **@Channel** to **Emitter**
 * **@Incoming("channel-name")** to consume messages from the topic
 
+## Day 18
 
+* Kafka consumers;
+* Consumer application polls kafka for data; every consumer application needs to have(belong) a **consumer group id**
+* Kafka maintains the list of consumer group ids and their offsets; It makes sure that a message is not delivered more than once to a consumer
+* When a consumer consumes the message, it sends an **acknowledgement** back to kafka and kafka updates the offset 
+* There are ways where you can configure or disable auto acknowledgement; So after consuming the message you explicitly return the acknowledgement as a header
+* You can configure polling time, polling interval
+* Kafka Message is made up of : **Key, Value, Timestamp, Header**
 
 
 

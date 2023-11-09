@@ -13,7 +13,7 @@ import org.eclipse.microprofile.reactive.messaging.Message;
 public class CalculatorPublisher {
     @Inject
     @Channel("calculator-channel")
-    Emitter<String> calculatorDtoEmitter;
+    Emitter<CalculatorDto> calculatorDtoEmitter;
 
     private static final String SQUARE = "square";
     private static final String INCREMENT = "increment";
@@ -31,7 +31,7 @@ public class CalculatorPublisher {
     private void publish(String key) {
         int number = (int)(Math.random() * 1000);
         CalculatorDto calculatorDto = new CalculatorDto(number);
-        Message<String> message = Message.of(calculatorDto.toString()); //WILL LOOK INTO THIS
+        Message<CalculatorDto> message = Message.of(calculatorDto);
         OutgoingKafkaRecordMetadata<Object> metadata = OutgoingKafkaRecordMetadata.builder()
                 .withKey(key)
                 .build();
