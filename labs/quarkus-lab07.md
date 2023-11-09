@@ -1,4 +1,4 @@
-### Quarkus  Lab6
+### Quarkus  Lab07
 
 * Create a new project __quarkus-lab07-kafka__ in IntelliJ
 
