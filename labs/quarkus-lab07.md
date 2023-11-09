@@ -8,7 +8,7 @@
 * Configure the following in application.properties file
 
 ```
-quarkus.application.name=lab06-consumer
+quarkus.application.name=lab07-consumer
 quarkus.package.type=uber-jar
 kafka.bootstrap.servers=localhost:9092
 
