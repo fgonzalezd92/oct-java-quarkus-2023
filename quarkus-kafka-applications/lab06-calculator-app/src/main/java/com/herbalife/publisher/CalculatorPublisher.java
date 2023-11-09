@@ -17,13 +17,30 @@ public class CalculatorPublisher {
 
     private static final String SQUARE = "square";
     private static final String INCREMENT = "increment";
+    private static final String CUBE = "cube";
+    private static final String DECREMENT = "decrement";
+    private static final String DOUBLEIT = "doubleIt";
 
     @Scheduled(every = "5s")
     public void publishSquareMessage() {
         publish(SQUARE);
     }
 
-    @Scheduled(every = "3s")
+    @Scheduled(every = "5s")
+    public void publishCubeMessage() {
+        publish(CUBE);
+    }
+    @Scheduled(every = "5s")
+    public void publishDoubleItMessage() {
+        publish(DOUBLEIT);
+    }
+
+    @Scheduled(every = "5s")
+    public void publishDecrementMessage() {
+        publish(DECREMENT);
+    }
+
+    @Scheduled(every = "5s")
     public void publishIncrementMessage() {
         publish(INCREMENT);
     }

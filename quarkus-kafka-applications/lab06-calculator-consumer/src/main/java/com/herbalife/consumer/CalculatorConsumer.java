@@ -29,9 +29,11 @@ public class CalculatorConsumer {
                 int increment = calculatorDto.getNumber() + 1;
                 yield "Increment of " + calculatorDto.getNumber() + " is " + increment;
             }
-            default -> throw new IllegalStateException("Unexpected value: " + key);
+            default -> {
+                yield "Received message with unknown key " + key;
+            }
         };
-        System.out.println(result);
+        System.out.println(result + " from partition " + consumerRecord.partition());
     }
 
 
