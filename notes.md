@@ -219,6 +219,12 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * Kafka Message is made up of : **Key, Value, Timestamp, Header**
 
 
+## Day 19
+
+* Number of consumer instances belonging to the same consumer group should be **lesser or equal** to the number of partitions
+* When you have topic with 3 partitions, you can atmost 3 instances of the consumer group. 
+* If you have instances more than the partitions, the instances remain **idle**
+* When a consumer instance goes down or is added a **rebalancing** occurs to accomodate the new instance as well
 
 
 

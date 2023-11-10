@@ -8,7 +8,4 @@ pluginManagement {
         id "${quarkusPluginId}" version "${quarkusPluginVersion}"
     }
 }
-rootProject.name = 'day18-consumer'
-
-//include ':sample-lib'
-//project(':sample-lib').projectDir = new File('../sample-lib')
+rootProject.name='day20-kafka'

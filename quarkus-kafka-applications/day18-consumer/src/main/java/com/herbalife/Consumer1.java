@@ -1,5 +1,6 @@
 package com.herbalife;
 
+import com.herbalife.library.MyLib;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -11,7 +12,7 @@ public class Consumer1 {
     @Incoming("day18-channel")
     public void consumeMessages(ConsumerRecords<String, String> records) {
         System.out.println("**********START Received " + records.count() + " messages **********");
-
+        MyLib.sayHello();
         records.forEach(record -> {
             long offset = record.offset();
             String value = record.value();
