@@ -6,7 +6,7 @@
 
 * Create a kafka consumer application **weather-finder**
 * It listens to a topic **weather-topic** for city names. Message can be an ordinary string.
-* On receiving the message connect to *http://api.weatherstack.com/current?access_key=8bbd3a99a778dd009152d71802721384&units=f&query=<cityName>* and get the current temperature in JSON format
+* On receiving the message connect to *http://api.weatherstack.com/current?access_key=8bbd3a99a778dd009152d71802721384&units=f&query=cityName* and get the current temperature in JSON format
 * Parse JSON and get the current temperature of the city alone. Your JSON response will be like this
 
 ``` json
