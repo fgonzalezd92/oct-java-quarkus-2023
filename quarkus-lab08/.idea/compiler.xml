@@ -5,6 +5,7 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-panache-common/3.5.1/e2ecf941f85bc3a9a045005eb88b4099f2ba301/quarkus-panache-common-3.5.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-arc/3.5.1/675bb4c3520616fe5fa6568e5d2bd5452e747b3/quarkus-arc-3.5.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-core/3.5.1/691fa891c3bd0a7070760245f7267989915da79e/quarkus-core-3.5.1.jar" />
