@@ -149,6 +149,48 @@ docker compose -p <projectName> -f <dockerComposeFile> up --build -d
 docker compose -p <projectName> -f <dockerComposeFile> down
 ```
 
+### k8s
+
+* Kubernetes is an orchestration tool. It manages the containers
+* It makes sure the containers are always **UP** and **RUNNING**
+* Fundamental building block of k8s is **"POD"**
+* A Pod is a wrapper to a container.
+* When somebody says "**Kubernetize your application**", this is what she means; 
+* Create your application; Containerize it using Docker(or Podman); Convert it to a Pod and Deploy them
+
+#### Working with k8s
+
+* Enabling Kubernetes in Docker Desktop, gives you all the tools neccessary for working with k8s
+* **kubectl** is the commandline tool that you'll use
+
+```
+kubectl version
+```
+
+* To get the cluster information 
+
+```
+kubectl config get-contexts
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
