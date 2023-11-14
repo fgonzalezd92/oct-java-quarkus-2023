@@ -173,7 +173,21 @@ kubectl version
 kubectl config get-contexts
 ```
 
+### Creating Pods
 
+* You can create pods through CLI or through configuration file.
+* Use **Deployments** to deploy n number of pods
+
+#### Commands
+
+```
+kubectl run <pod-name> --image=<image-name>
+kubectl get pods
+kubectl delete <pod-name>
+kubectl apply -f <config-file-name>
+kubectl get deployments
+kubectl delete -f <config-file-name>
+```
 
 
 
