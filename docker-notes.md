@@ -109,6 +109,50 @@ docker run --name my-api-2 --rm -d  -p 8081:8080 -e GREETINGS="Ola" -e GOODBYE="
 docker compose -p my-kafka -f docker-compose-kafka.yml up -d
 ```
 
+* Create a docker compose file and configure the services
+
+``` dockerfile
+version: '3.7'
+services:
+  weather-api:
+    image: weather-api:1.0
+    build:
+      context: ./weather-api
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=host.docker.internal:9094
+  weather-finder:
+    image: weather-finder:1.0
+    build:
+      context: ./weather-finder
+      dockerfile: Dockerfile
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=host.docker.internal:9094
+    depends_on:
+      - weather-api
+
+```
+
+* docker compose builds all the images and starts the containers
+
+```
+docker compose -p <projectName> -f <dockerComposeFile> up --build -d
+```
+
+* **--build** option makes sure the applications images are rebuilt
+
+* Stop the containers
+
+```
+docker compose -p <projectName> -f <dockerComposeFile> down
+```
+
+
+
+
+
 
 
 

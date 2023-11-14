@@ -227,8 +227,12 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * When a consumer instance goes down or is added a **rebalancing** occurs to accomodate the new instance as well
 
 
+## Day 20
 
-
+* Dead Letter Topics; When an exception occurs while consuming a message, you have three options
+* **fail**: default option; the application terminates
+* **ignore**: discards the message and moves to the next; 
+* **dead-letter-queue**:  The message gets posted to a new topic say **calculator-dlq** and offset gets updated
 
 
 
