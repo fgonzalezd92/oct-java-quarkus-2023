@@ -5,7 +5,7 @@ metadata:
   labels:
     app: simple-api
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: simple-api
@@ -19,3 +19,17 @@ spec:
         image: simple-api:1.0.0
         ports:
         - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-api
+spec:
+    selector:
+        app: simple-api
+    ports:
+      - port: 80
+        #-p 30001:8080; NodePort can run only in the range of 30000-32767
+        targetPort: 8080
+        nodePort: 30001
+    type: NodePort
