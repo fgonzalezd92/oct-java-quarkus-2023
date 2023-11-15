@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greetings-api
+  namespace: training
+  labels:
+    app: greetings-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: greetings-api
+  template:
+    metadata:
+      labels:
+        app: greetings-api
+    spec:
+      containers:
+        - name: greetings-api
+          image: prabhudev/november-repo:day22-api-1.0.0
+          env:
+            - name: WELCOME
+              valueFrom:
+                configMapKeyRef:
+                  name: training-apps-config
+                  key: WELCOME
+            - name: GOODBYE
+              valueFrom:
+                configMapKeyRef:
+                  name: training-apps-config
+                  key: GOODBYE
+            - name: DATASOURCE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: training-apps-secret
+                  key: DATASOURCE_URL
+            - name: DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                   name: training-apps-secret
+                   key: DATASOURCE_USERNAME
+            - name: DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                   name: training-apps-secret
+                   key: DATASOURCE_PASSWORD
+
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: greetings-api-service
+  namespace: training
+spec:
+  selector:
+    app: greetings-api
+  ports:
+    - port: 80
+      #-p 30001:8080; NodePort can run only in the range of 30000-32767
+      targetPort: 8080
+      nodePort: 30001
+  type: NodePort
