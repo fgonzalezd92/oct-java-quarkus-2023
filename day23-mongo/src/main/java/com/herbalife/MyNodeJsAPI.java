@@ -15,6 +15,6 @@ public interface MyNodeJsAPI {
 
     @POST
     @Path("/bye/{name}")
-    String bye(String name);
-    //NodeApiResponse bye(String name);
+    //String bye(String name);
+    NodeApiResponse bye(String name);
 }

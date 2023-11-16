@@ -11,7 +11,7 @@ app.post('/bye/:name', (req, res) => {
     let message = {
         data: `Bye ${req.params.name}`
     };
-    res.send(JSON.stringify(message));
+    res.json(message);
 });
 
 app.listen(3000, () => {
