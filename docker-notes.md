@@ -189,6 +189,16 @@ kubectl get deployments
 kubectl delete -f <config-file-name>
 ```
 
+* Set up a cluster in Azure; **AKS**
+* Access the cluster from local machine. (**az login** and **az aks get-credentials** command)
+* Switch(set the context) to the new cluster 
+* Create Deployments, Services, ConfigMaps, Secrets ...etc
+* You can access the pods using services
+* **NodePort** not really used for production environments, because of the port limitation
+* **LoadBalancer** can be used for pods; Generates an external ip address everytime; Every set of pods has a separate load balancer; Not preferred
+* **Ingress**; Acts like a API Gateway; Set up routing information to various APIs. Most widely used in realtime
+
+
 
 
 
