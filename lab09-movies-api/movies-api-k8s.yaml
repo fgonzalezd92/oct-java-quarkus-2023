@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lab09-configmap
+data:
+  MONGODB_URL: "mongodb://root:root@host.docker.internal:27017/training-prod?authSource=admin"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: lab09-secret
+data:
+  OMDB_API_KEY: NTJkMWM3Zgo=
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movies-api
+  labels:
+    app: movies-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movies-api
+  template:
+    metadata:
+      labels:
+        app: movies-api
+    spec:
+      containers:
+        - name: movies-api
+          image: movies-api:1.0.0
+          env:
+            - name: MONGODB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: lab09-configmap
+                  key: MONGODB_URL
+            - name: OMDB_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: lab09-secret
+                  key: OMDB_API_KEY
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: movies-api-service
+spec:
+  selector:
+    app: movies-api
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30001
+  type: NodePort
