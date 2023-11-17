@@ -2,7 +2,7 @@
 
 #### lab09-movies-api
 
-* Create **lab08-movies-api** application with rest-client, mongo, resteasy, lombok dependencies
+* Create **lab09-movies-api** application with rest-client, mongo, resteasy, lombok dependencies
 * Create two endpoints
 
 ```
