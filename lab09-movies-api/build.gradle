@@ -12,11 +12,14 @@ dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
     implementation 'io.quarkus:quarkus-mongodb-panache'
+    implementation 'io.quarkus:quarkus-cache'
+    implementation 'io.quarkus:quarkus-redis-cache'
     implementation 'io.quarkus:quarkus-rest-client-reactive-jackson'
     implementation 'io.quarkus:quarkus-arc'
     testImplementation 'io.quarkus:quarkus-junit5'
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
     implementation 'org.projectlombok:lombok:1.18.28'
+    implementation 'io.quarkus:quarkus-scheduler'
 }
 
 group 'com.herbalife'

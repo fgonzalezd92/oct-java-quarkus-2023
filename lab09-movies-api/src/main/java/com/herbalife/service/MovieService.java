@@ -4,6 +4,9 @@ import com.herbalife.api.OmdbApi;
 import com.herbalife.api.OmdbApiResponse;
 import com.herbalife.document.Movie;
 import com.herbalife.dto.MovieDto;
+import io.quarkus.cache.CacheInvalidateAll;
+import io.quarkus.cache.CacheKey;
+import io.quarkus.cache.CacheResult;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.slf4j.Logger;
@@ -18,7 +21,8 @@ public class MovieService {
     @RestClient
     OmdbApi omdbApi;
 
-    public void addMovieDetailsFromOmdb(String title) {
+    @CacheResult(cacheName = "movie")
+    public OmdbApiResponse addMovieDetailsFromOmdb(@CacheKey String title) {
         OmdbApiResponse omdbApiResponse = omdbApi.getMovieDetails(title);
         Movie movie = new Movie();
         movie.setTitle(omdbApiResponse.getTitle());
@@ -27,6 +31,7 @@ public class MovieService {
         movie.setYear(omdbApiResponse.getYear());
         movie.persist();
         logger.info("Movie {} details added to db", title);
+        return omdbApiResponse;
     }
 
     public MovieDto getMovieDetailsFromDb(String title) {
@@ -38,5 +43,10 @@ public class MovieService {
             Movie movie = optionalMovie.get();
             return new MovieDto(movie.getTitle(), movie.getLanguage(), movie.getActors(), movie.getYear());
         }
+    }
+
+    @CacheInvalidateAll(cacheName = "movie")
+    public void clearAllCache() {
+        logger.info("******Clearing all cache");
     }
 }

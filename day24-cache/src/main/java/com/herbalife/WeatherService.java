@@ -1,12 +1,15 @@
 package com.herbalife;
 
 import io.quarkus.cache.CacheInvalidate;
+import io.quarkus.cache.CacheInvalidateAll;
 import io.quarkus.cache.CacheKey;
 import io.quarkus.cache.CacheResult;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class WeatherService {
+
+
 
     @CacheResult(cacheName = "weather")
     public double getWeather(@CacheKey String city) {
@@ -23,6 +26,11 @@ public class WeatherService {
             e.printStackTrace();
         }
         return Math.random() * 100;
+    }
+
+    @CacheInvalidateAll(cacheName = "weather")
+    public void clearAllCache() {
+        System.out.println("------- Clearing all cache");
     }
 
     @CacheInvalidate(cacheName = "weather")
