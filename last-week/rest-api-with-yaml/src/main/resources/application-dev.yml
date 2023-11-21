@@ -1,0 +1,4 @@
+omdb:
+  api-key: devjfdjsfsdjhf
+  base-url: https://dev.omdbapi.com
+  license-expiry: 2024-12-31

@@ -1,0 +1,4 @@
+omdb:
+  api-key: perfjfdjsfsdjhf
+  base-url: https://perf.omdbapi.com
+  license-expiry: 2024-12-30

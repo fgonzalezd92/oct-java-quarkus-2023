@@ -1,0 +1,85 @@
+quarkus:
+  application:
+    name: Rest API with Yaml
+  datasource:
+    db-kind: mysql
+    username: root
+    password: root
+  profile: perf
+
+omdb:
+  license-expiry: 2021-12-31
+
+#topic.name=Yaml configuration
+#topic.duration=30mins
+#topic.complexity=easy
+
+#  sessions.topics.60=Functional programming with Erlang,Concurrency on the JVM
+#  sessions.topics.45=Scala Tricks,Goroutines
+#  sessions.topics.90=Spring unit testing,Unit testing JavaScript,RoR
+
+
+#  topics-list:
+#    - name: Functional programming with Erlang
+#      duration: 60
+#    - name: Concurrency on the JVM
+#      duration: 60
+#    - name: Scala Tricks
+#      duration: 45
+#    - name: Goroutines
+#      duration: 45
+#    - name: Spring unit testing
+#      duration: 90
+
+sessions:
+  more-topics:
+    60:
+      - Functional programming with Erlang
+      - Concurrency on the JVM
+    45:
+      - Scala Tricks
+      - Goroutines
+    90:
+      - Spring unit testing
+      - Unit testing JavaScript,RoR
+  topics:
+    60: Functional programming with Erlang,Concurrency on the JVM
+    45: Scala Tricks,Goroutines
+    90: Spring unit testing,Unit testing JavaScript,RoR
+
+
+
+"%dev":
+  topic:
+    name: Yaml configuration
+    duration: 30mins
+    complexity: easy
+  welcome: Welcome to the Quarkus Training
+
+"%test":
+  topic:
+    name: Yaml configuration
+    duration: 30mins
+    complexity: easy
+  welcome: Welcome to the Quarkus Training
+
+"%prod":
+  topic:
+    name: Yaml configuration
+    duration: 30mins
+    complexity: easy
+  welcome: Welcome to the Quarkus Training
+
+"%perf":
+  topic:
+    name: Yaml configuration
+    duration: 30mins
+    complexity: easy
+  welcome: Welcome to the Quarkus Training
+
+#  %dev.welcome=Welcome to the Quarkus Training
+#  %test.welcome=Welcome to the Quarkus Training
+#  %prod.welcome=Welcome to the Quarkus Training
+#  %staging.welcome=Welcome to the Quarkus Training
+
+

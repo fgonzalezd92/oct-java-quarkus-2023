@@ -235,6 +235,12 @@ java -Dquarkus.http.port=9090 -jar <jarFile>
 * **dead-letter-queue**:  The message gets posted to a new topic say **calculator-dlq** and offset gets updated
 
 
+```
+topic.name=Yaml configuration
+topic.duration=30mins
+topic.complexity=easy
+
+```		
 
 
 
