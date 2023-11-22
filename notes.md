@@ -259,6 +259,53 @@ query {
   }
 }
 
+query {
+  company(id: "1") {
+    name
+    ceo
+  }
+  all: allCompanies {
+    name
+    ceo
+    headcount
+  }
+  names: allCompanies {
+    name
+  }
+  ceos: allCompanies {
+    ceo
+  }
+  headcounts: allCompanies {
+    name
+    headcount
+  }
+}
+
+query {
+  all: allCompanies {
+    name
+    ...companyFragment
+  }
+  
+  favorites: allCompanies {
+    ...companyFragment
+  }
+  
+}
+fragment companyFragment on Company {
+  name
+  ceo
+}
+
+query companies($headcountVar: Int!) {
+  larger: companiesWithHeadcountGt(headcount: 200) {
+    name
+  }
+  large: companiesWithHeadcountGt(headcount: $headcountVar) {
+    name
+  }
+}
+
 ```
 
 
