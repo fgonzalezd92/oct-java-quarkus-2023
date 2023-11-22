@@ -5,15 +5,25 @@ public class Company {
     private String name;
     private String ceo;
     private int headcount;
+    private boolean listed;
 
     public Company() {
     }
 
-    public Company(String id, String name, String ceo, int headcount) {
+    public Company(String id, String name, String ceo, int headcount, boolean listed) {
         this.id = id;
         this.name = name;
         this.ceo = ceo;
         this.headcount = headcount;
+        this.listed = listed;
+    }
+
+    public boolean isListed() {
+        return listed;
+    }
+
+    public void setListed(boolean listed) {
+        this.listed = listed;
     }
 
     public String getId() {
