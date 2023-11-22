@@ -1,8 +1,10 @@
 package com.herbalife.resource;
 
 import com.herbalife.DB;
+import com.herbalife.dto.CompanyDto;
 import com.herbalife.model.Company;
 import org.eclipse.microprofile.graphql.GraphQLApi;
+import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Name;
 import org.eclipse.microprofile.graphql.Query;
 
@@ -10,6 +12,35 @@ import java.util.List;
 
 @GraphQLApi
 public class CompanyResource {
+
+
+    @Mutation("addCompany")
+    public Company addCompany(@Name("companyInput") CompanyDto companyDto) {
+        Company company = new Company(
+                String.valueOf((int) (Math.random() * 1000)),
+                companyDto.getName(),
+                companyDto.getCeo(),
+                companyDto.getHeadcount(),
+                companyDto.isListed()
+        );
+        DB.getCompanies().add(company);
+        return company;
+    }
+
+    @Mutation("removeCompany")
+    public Company removeCompany(@Name("companyId") String id) {
+        Company company = DB
+                .getCompanies()
+                .stream()
+                .filter(c -> c.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+        if (company != null) {
+            DB.getCompanies().remove(company);
+        }
+        return company;
+
+    }
 
 
     @Query("allCompanies")

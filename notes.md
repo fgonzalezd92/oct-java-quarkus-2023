@@ -324,6 +324,62 @@ fragment companyFragment on Company {
   listed
 }
 
+
+query listed($isListed: Boolean!) {
+  Companies: listedCompanies(listed: $isListed) {
+#    id @include (if: $isListed)
+    Name: name
+    CEO: ceo
+    ... companyFragment @skip (if: $isListed)
+    # headcount  @include (if: $isListed)
+    # listed @include (if: $isListed)
+  
+ 
+ }
+} 
+fragment companyFragment on Company {
+  CompanyID: id
+  Headcount: headcount
+  IsListed: listed
+}
+
+# query {
+#   allCompanies {
+#     id
+#     name
+#     ceo
+#   }
+# }
+
+#mutations execute sequentially; whereas queries execute parallelly
+mutation {
+  ms: addCompany(companyInput: {
+    name: "MS",
+    ceo: "Satya",
+    headcount: 20000,
+    listed: true
+  }) {
+    id
+    name
+    ceo
+    headcount
+    listed
+  }
+  
+  ibm:addCompany(companyInput: {
+    name: "IBM",
+    ceo: "kjh",
+    headcount: 20000,
+    listed: true
+  }) {
+    id
+    name
+    ceo
+    headcount
+    listed
+  }
+}
+
 ```
 
 
