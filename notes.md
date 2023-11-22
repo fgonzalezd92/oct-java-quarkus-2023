@@ -306,6 +306,24 @@ query companies($headcountVar: Int!) {
   }
 }
 
+query listed($isListed: Boolean!) {
+  companies: listedCompanies(listed: $isListed) {
+#    id @include (if: $isListed)
+    name
+    ceo
+    ... companyFragment @skip (if: $isListed)
+    # headcount  @include (if: $isListed)
+    # listed @include (if: $isListed)
+  
+ 
+ }
+} 
+fragment companyFragment on Company {
+  id
+  headcount
+  listed
+}
+
 ```
 
 

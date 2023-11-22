@@ -18,6 +18,16 @@ public class CompanyResource {
         return DB.getCompanies();
     }
 
+    @Query("listedCompanies")
+    public List<Company> getAllCompanies(@Name("listed") boolean listed) {
+        return DB
+                .getCompanies()
+                .stream()
+                .filter(company -> company.isListed() == listed)
+                .toList();
+    }
+
+
     @Query("companiesWithHeadcountGt")
     public List<Company> getCompaniesWithHeadcountGreaterThan(@Name("headcount") int headcount) {
         return DB
