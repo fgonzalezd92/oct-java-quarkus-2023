@@ -243,7 +243,23 @@ topic.complexity=easy
 ```		
 
 
+### GraphQL
 
+``` graphql
+
+query {
+  company(id: "1") {
+    name
+    ceo
+  }
+  allCompanies {
+    name
+    ceo
+    headcount
+  }
+}
+
+```
 
 
 
