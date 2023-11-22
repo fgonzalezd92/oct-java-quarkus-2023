@@ -1,0 +1,11 @@
+# Except Quarkus all other implementations of Graphql need to have a schema defined
+type Company {
+    id: ID!
+    name: String!
+    ceo: String!
+    headcount: Int
+}
+
+type Query {
+    allCompanies: [Company]
+}
