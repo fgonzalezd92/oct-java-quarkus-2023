@@ -3,6 +3,9 @@ package com.herbalife.resource;
 import com.herbalife.DB;
 import com.herbalife.dto.CompanyDto;
 import com.herbalife.model.Company;
+import io.smallrye.graphql.api.Subscription;
+import io.smallrye.mutiny.Multi;
+import io.smallrye.mutiny.operators.multi.processors.BroadcastProcessor;
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Name;
@@ -13,9 +16,22 @@ import java.util.List;
 @GraphQLApi
 public class CompanyResource {
 
+    BroadcastProcessor<Company> companyProcessor = BroadcastProcessor.create();
+    BroadcastProcessor<Company> removalCompanyProcessor = BroadcastProcessor.create();
+
+    @Subscription("newCompany")
+    public Multi<Company> newCompany() {
+        return companyProcessor;
+    }
+
+    @Subscription("removeCompany")
+    public Multi<Company> companyRemoved() {
+        return removalCompanyProcessor;
+    }
 
     @Mutation("addCompany")
     public Company addCompany(@Name("companyInput") CompanyDto companyDto) {
+        System.out.println("*****companyDto = " + companyDto);
         Company company = new Company(
                 String.valueOf((int) (Math.random() * 1000)),
                 companyDto.getName(),
@@ -24,6 +40,7 @@ public class CompanyResource {
                 companyDto.isListed()
         );
         DB.getCompanies().add(company);
+        companyProcessor.onNext(company); //publish the new company to all subscribers
         return company;
     }
 
@@ -38,6 +55,7 @@ public class CompanyResource {
         if (company != null) {
             DB.getCompanies().remove(company);
         }
+        removalCompanyProcessor.onNext(company); //publish the removed company to all subscribers
         return company;
 
     }

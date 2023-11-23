@@ -6,6 +6,22 @@ quarkus:
     username: root
     password: root
   profile: perf
+  otel:
+    exporter:
+      otlp:
+        logs:
+          endpoint: http://localhost:4317
+        traces:
+          endpoint: http://localhost:4317
+        metrics:
+          endpoint: http://localhost:4317
+  log:
+    level: INFO
+    category:
+      "com.herbalife":
+        level: INFO
+    console:
+      format: "%d{HH:mm:ss} %-5p traceId=%X{traceId}, parentId=%X{parentId}, spanId=%X{spanId}, sampled=%X{sampled} [%c{2.}] (%t) %s%e%n"
 
 omdb:
   license-expiry: 2021-12-31
