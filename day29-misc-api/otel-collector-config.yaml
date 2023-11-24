@@ -1,0 +1,59 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+
+processors:
+  batch:
+
+exporters:
+    logging:
+      verbosity: detailed
+    otlphttp:
+      endpoint: "http://host.docker.internal:4319"
+      tls:
+        insecure: true
+    kafka/traces:
+      brokers:
+        - "host.docker.internal:9094"
+      topic: "otel-traces"
+      encoding: "otlp_json"
+      metadata:
+        full: true
+    kafka/logs:
+      brokers:
+        - "host.docker.internal:9094"
+      topic: "otel-logs"
+      encoding: "otlp_json"
+      metadata:
+        full: true
+    kafka/metrics:
+      brokers:
+        - "host.docker.internal:9094"
+      topic: "otel-metrics"
+      encoding: "otlp_proto"
+      metadata:
+        full: true
+    prometheus:
+      endpoint: "0.0.0.0:8889"
+
+extensions:
+  health_check:
+  pprof:
+  zpages:
+
+service:
+  extensions: [health_check, pprof, zpages]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, kafka/traces] #prometheus, elk
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, kafka/metrics]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, kafka/logs]
