@@ -24,7 +24,7 @@ public class JwtResource {
 
     @GET
     @Path("roles-allowed")
-    @RolesAllowed({ "users", "admins" })
+    @RolesAllowed({ "users", "admin" })
     public String helloRolesAllowed(@Context SecurityContext ctx) {
         System.out.println(jwt.getName());
         System.out.println(jwt.getClaimNames());
