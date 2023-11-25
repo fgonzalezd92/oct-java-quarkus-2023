@@ -9,10 +9,6 @@ processors:
 exporters:
     logging:
       verbosity: detailed
-    otlphttp:
-      endpoint: "http://host.docker.internal:4319"
-      tls:
-        insecure: true
     kafka/traces:
       brokers:
         - "host.docker.internal:9094"
